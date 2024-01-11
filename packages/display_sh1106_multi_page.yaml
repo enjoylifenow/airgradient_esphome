@@ -126,7 +126,7 @@ display:
           it.printf(128, 16, id(poppins_light_12), TextAlign::TOP_RIGHT, "%.0f ppm", id(co2).state);
           it.printf(0, 32, id(poppins_light_12), "VOC: %.0f", id(voc).state);
           it.printf(128, 32, id(poppins_light_12), TextAlign::TOP_RIGHT, "NOx: %.0f", id(nox).state);
-          it.printf(0, 48, id(poppins_light_12), "AQI: %.0f", id(pm_2_5_aqi).state);
+          it.printf(0, 48, id(poppins_light_12), "AQI: %.0f", id(pm_2_5_us_aqi).state);
       - id: blank
         lambda: |-
           it.printf(0, 0, id(open_sans_14), "");
