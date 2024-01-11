@@ -11,7 +11,7 @@ interval:
                   lambda: 'return id(co2).state < 800;'
                 then:
                   - light.turn_on:
-                      id: led_strip
+                      id: segm1
                       brightness: !lambda 'return id(led_brightness).state / 100.0;'
                       red: 0%
                       green: 100%
@@ -21,7 +21,7 @@ interval:
                   lambda: 'return id(co2).state >= 800 && id(co2).state < 1000;'
                 then:
                   - light.turn_on:
-                      id: led_strip
+                      id: segm1
                       brightness: !lambda 'return id(led_brightness).state / 100.0;'
                       red: 100%
                       green: 100%
@@ -31,7 +31,7 @@ interval:
                   lambda: 'return id(co2).state >= 1000 && id(co2).state < 1500;'
                 then:
                   - light.turn_on:
-                      id: led_strip
+                      id: segm1
                       brightness: !lambda 'return id(led_brightness).state / 100.0;'
                       red: 100%
                       green: 70%
@@ -41,7 +41,7 @@ interval:
                   lambda: 'return id(co2).state >= 1500 && id(co2).state < 2000;'
                 then:
                   - light.turn_on:
-                      id: led_strip
+                      id: segm1
                       brightness: !lambda 'return id(led_brightness).state / 100.0;'
                       red: 100%
                       green: 0%
@@ -51,7 +51,7 @@ interval:
                   lambda: 'return id(co2).state >= 2000 && id(co2).state < 3000;'
                 then:
                   - light.turn_on:
-                      id: led_strip
+                      id: segm1
                       brightness: !lambda 'return id(led_brightness).state / 100.0;'
                       red: 60%
                       green: 0%
@@ -61,7 +61,7 @@ interval:
                   lambda: 'return id(co2).state >= 3000 && id(co2).state < 10000;'
                 then:
                   - light.turn_on:
-                      id: led_strip
+                      id: segm1
                       brightness: !lambda 'return id(led_brightness).state / 100.0;'
                       red: 40%
                       green: 0%
