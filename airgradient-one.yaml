@@ -6,29 +6,31 @@ substitutions:
   friendly_devicename: "Airgradient One"
   ag_esphome_config_version: 1.0.0
   add_mac_suffix: "true"  # Must have quotes around value
+  hidden_ssid: "false"
 
 # Enable Home Assistant API
 api:  # Add encryption key as desired
 
 ota:  # Add password as desired
 
-wifi:
+wifi: 
   fast_connect: ${hidden_ssid}
   ssid: !secret wifi_ssid
   password: !secret wifi_password
-  domain: !secret domain
+  domain: !secret wifi_domain
   # Enable fallback hotspot (captive portal) in case wifi connection fails
-  ap:
+  ap: {}
 
 packages:
   board: github://enjoylifenow/airgradient_esphome/packages/airgradient_esp32-c3_board.yaml
-  pm_2.5: github://enjoylifenow/airgradient_esphome/packages/sensor_pms5003.yaml
+  pm_2.5: github://enjoylifenow/airgradient_esphome/packages/sensor_pms5003.yaml@v0.0.1-alpha
   co2: github://enjoylifenow/airgradient_esphome/packages/sensor_s8.yaml
   temp_humidity: github://enjoylifenow/airgradient_esphome/packages/sensor_sht40.yaml
   tvoc: github://enjoylifenow/airgradient_esphome/packages/sensor_sgp41.yaml
-  display: github://enjoylifenow/airgradient_esphome/packages/display_sh1106_multi_page.yaml
-  led: github://enjoylifenow/airgradient_esphome/packages/led.yaml
-  led_co2: github://enjoylifenow/airgradient_esphome/packages/led_co2.yaml
+  display: github://enjoylifenow/airgradient_esphome/packages/display_sh1106_multi_page.yaml@v0.0.1-alpha
+  led: github://enjoylifenow/airgradient_esphome/packages/led.yaml@v0.0.1-alpha
+  led_co2: github://enjoylifenow/airgradient_esphome/packages/led_co2.yaml@v0.0.1-alpha
+  led_pm25: github://enjoylifenow/airgradient_esphome/packages/led_pm25.yaml@v0.0.2-alpha
   airgradient_api: github://enjoylifenow/airgradient_esphome/packages/airgradient_api_esp32-c3.yaml
   hardware_watchdog: github://enjoylifenow/airgradient_esphome/packages/watchdog.yaml
   config_button: github://enjoylifenow/airgradient_esphome/packages/config_button.yaml
