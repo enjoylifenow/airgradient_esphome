@@ -66,3 +66,9 @@ interval:
                       red: 40%
                       green: 0%
                       blue: 0%
+      - if:
+          condition:
+            light.is_oo: segm3
+          then:
+            - light.turn_off:
+                id: segm3
