@@ -68,7 +68,7 @@ interval:
                       blue: 0%
       - if:
           condition:
-            light.is_oo: segm3
+            light.is_on: segm3
           then:
             - light.turn_off:
                 id: segm3
