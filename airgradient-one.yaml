@@ -6,7 +6,6 @@ substitutions:
   friendly_devicename: "Airgradient One"
   ag_esphome_config_version: 1.0.0
   add_mac_suffix: "true"  # Must have quotes around value
-  hidden_ssid: "false"
 
 # Enable Home Assistant API
 api:  # Add encryption key as desired
@@ -14,7 +13,6 @@ api:  # Add encryption key as desired
 ota:  # Add password as desired
 
 wifi: 
-  fast_connect: ${hidden_ssid}
   ssid: !secret wifi_ssid
   password: !secret wifi_password
   domain: !secret wifi_domain
