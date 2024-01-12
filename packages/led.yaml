@@ -29,7 +29,7 @@ light:
     id: segm2    
 
   - platform: partition
-    name: "Partition Light 1"
+    name: "Partition Light 3"
     segments:
       # Use first 10 LEDs from the light with ID light1
       - id: led_strip
